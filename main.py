@@ -61,7 +61,7 @@ if user_input:
 
             with col1:
                 st.image(
-                    "https://github.com/1020nys/chatbot/blob/main/woman.png",
+                    "https://i.namu.wiki/i/nTpvyrZYPoJBnrydRk9_5WAUX6kz1B8Wu6IvFIrLnxwoaV9BD-fP23SGhHp3wjls59AftaAIAa1xWWGCaruCog.webp",
                     width=50,
                 )
 
