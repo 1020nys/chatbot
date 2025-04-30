@@ -26,7 +26,7 @@ def print_messages():
             with st.chat_message(message.chat_message.role):
                 if message.chat_message.role == "assistant":
                     st.image(
-                        "https://raw.githubusercontent.com/1020nys/chatbot/main/mindful%20%EC%97%AC%EC%84%B1%EC%9D%B4%EB%AF%B8%EC%A7%80.png",
+                        "https://github.com/1020nys/chatbot/blob/main/woman.png",
                         width=50,
                     )
                 st.write(message.chat_message.content)
