@@ -61,7 +61,7 @@ if user_input:
 
             with col1:
                 st.image(
-                    "woman.png", width=50
+                    "woman.png", width=80
                 )
 
             with col2:
