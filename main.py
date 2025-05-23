@@ -63,9 +63,21 @@ if user_input:
 
             with col1:
                 image = Image.open("woman.png")
-                resized = image.resize((80, 120), Image.LANCZOS)  # 비율 유지해서 축소
-                st.image(resized)   
-                
+                # 고해상도로 리사이즈 (예: 실제 픽셀은 240px 이상 유지)
+                target_width = 80
+                scale_factor = 3  # 모바일 대응용 3배 고해상도
+                high_res_width = target_width * scale_factor
+
+                # 세로 비율 유지
+                width, height = image.size
+                aspect_ratio = height / width
+                high_res_height = int(high_res_width * aspect_ratio)
+
+                # 고해상도 리사이징 + RGB 변환
+                resized = image.resize((high_res_width, high_res_height), Image.LANCZOS).convert("RGB")
+
+                # 화면엔 작게 보이되, 내부 픽셀은 고해상도 유지
+                st.image(resized, width=target_width)
 
             with col2:
                 container = st.empty()  # 여기로 스트리밍 응답이 실시간 출력됨
