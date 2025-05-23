@@ -26,7 +26,7 @@ def print_messages():
             with st.chat_message(message.chat_message.role):
                 if message.chat_message.role == "assistant":
                     st.image(
-                        "https://github.com/1020nys/chatbot/blob/main/woman.png",
+                        "https://i.imgur.com/ELBtqBk.png",
                         width=50
                     )
                 st.write(message.chat_message.content)
@@ -73,4 +73,5 @@ def add_message(role, message, msg_type="text", tool_name=""):
                     tool_name=tool_name,
                 )
             )
+
 
