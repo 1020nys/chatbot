@@ -61,8 +61,7 @@ if user_input:
 
             with col1:
                 st.image(
-                    "https://raw.githubusercontent.com/1020nys/chatbot/main/woman.png",
-                    width=50,
+                    "woman.png"
                 )
 
             with col2:
@@ -89,5 +88,6 @@ if user_input:
 
     else:
         warning_msg.warning("개인정보 입력을 완료해주세요.")
+
 
 
