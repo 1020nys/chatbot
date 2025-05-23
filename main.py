@@ -59,10 +59,13 @@ if user_input:
         with st.chat_message("assistant"):
             col1, col2 = st.columns([1, 9])
 
+
             with col1:
                 st.image(
-                    "woman.png", width=30
+                    "https://github.com/1020nys/chatbot/blob/main/woman.png", width=50
                 )
+
+
             with col2:
                 container = st.empty()  # 여기로 스트리밍 응답이 실시간 출력됨
 
@@ -87,6 +90,7 @@ if user_input:
 
     else:
         warning_msg.warning("개인정보 입력을 완료해주세요.")
+
 
 
 
