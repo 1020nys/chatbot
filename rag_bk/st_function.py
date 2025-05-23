@@ -26,7 +26,7 @@ def print_messages():
             with st.chat_message(message.chat_message.role):
                 if message.chat_message.role == "assistant":
                     st.image(
-                        "woman.png"
+                        "woman.png", width=30
                     )
                 st.write(message.chat_message.content)
 
