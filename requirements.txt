@@ -8,4 +8,3 @@ faiss-cpu
 langchain-community
 langchain_openai
 langgraph>=0.0.41
-langgraph-prebuilt>=0.2.1
