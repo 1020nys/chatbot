@@ -10,6 +10,7 @@ from langchain_openai import ChatOpenAI
 from rag_bk.modules.google import GoogleSearch
 from rag_bk.modules.tools import WebSearchTool, retriever_tool
 from rag_bk.modules.agent import create_agent_executor
+from PIL import Image
 
 # API KEY 정보로드
 st.secrets.get("OPENAI_API_KEY")
@@ -59,10 +60,12 @@ if user_input:
         with st.chat_message("assistant"):
             col1, col2 = st.columns([1, 9])
 
+
             with col1:
-                st.image(
-                    "woman.png", width=50
-                )
+                image = Image.open("woman.png")
+                resized = image.resize((80, 120), Image.LANCZOS)  # 비율 유지해서 축소
+                st.image(resized)   
+                
 
             with col2:
                 container = st.empty()  # 여기로 스트리밍 응답이 실시간 출력됨
