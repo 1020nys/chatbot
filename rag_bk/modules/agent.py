@@ -76,7 +76,7 @@ There should be no redundant sources. It should simply be:
     )
 
     agent_executor = create_react_agent(
-        model, tools=tools, checkpointer=memory, state_modifier=system_prompt
+        model, tools=tools, checkpointer=memory
     )
 
     return agent_executor
